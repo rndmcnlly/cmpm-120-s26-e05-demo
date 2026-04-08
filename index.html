@@ -1,9 +1,33 @@
 <html>
+  <!-- cursor park:  ___ ___ -->
   <head>  
     <title>Tetris clone</title>
+    <style>
+      #game {
+        border: 1px solid #000;
+      }
+      #block {
+        background-color: red;
+        width: 32px;
+        height: 32px;
+        position: relative;
+      }
+    </style>
   </head>
   <body>
+    <div id="game">
+      <div id="block">x</div>
+    </div>
+    <button id="b">bump</button>
     Game goes here, hopefully, today.
+    <script>
+      const b = document.getElementById("b");
+      console.log(b);
+      let x = 0;
+      b.addEventListener("click", function() {
+        x += 10;
+        block.style.left = `${x}px`;
+      });
+    </script>
   </body>
 </html>
-  
